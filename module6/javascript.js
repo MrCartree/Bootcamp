@@ -1,23 +1,29 @@
-document.getElementById("button1").addEventListener("click", function(){
-    document.getElementById("box").style.height = "250px";
-    document.getElementById("box").style.width = "250px";
+const boxStyle = document.getElementById('box').style;
+
+function setBoxStyling(property, value) {
+    boxStyle[property] = value;
+}
+
+$('#button1').click(function() {
+    setBoxStyling('width', '250px');
+    setBoxStyling('height', '250px');
 });
 
-document.getElementById("button2").addEventListener("click", function(){
-    document.getElementById("box").style.backgroundColor = "blue";
+$('#button2').click(function(){
+    setBoxStyling('backgroundColor', "blue");
 });
 
-document.getElementById("button3").addEventListener("click", function(){
-    document.getElementById("box").style.opacity = "0.25";
+$('#button3').click(function(){
+    boxStyle.opacity = '.25';
 });
 
-document.getElementById("button4").addEventListener("click", function(){
-    document.getElementById("box").style.height = "150px";
-    document.getElementById("box").style.width = "150px";
-    document.getElementById("box").style.backgroundColor = "orange";
-    document.getElementById("box").style.opacity = "1";
+$('#button4').click(function () {
+    boxStyle.height = "150px";
+    boxStyle.width = "150px";
+    boxStyle.backgroundColor = "orange";
+    boxStyle.opacity = "1";
 });
 
-document.getElementById("button5").addEventListener("click", function(){
+$('#button5').click(function () {
     window.close();
 });
